@@ -12,6 +12,7 @@ class DriverCreationForm(UserCreationForm):
         required=True,
         validators=[MinLengthValidator(8), MaxLengthValidator(8)],
     )
+
     class Meta(UserCreationForm.Meta):
         model = Driver
         fields = UserCreationForm.Meta.fields + (
