@@ -70,6 +70,7 @@ class CarDetailView(LoginRequiredMixin, generic.DetailView):
             car.drivers.add(request.user)
         return redirect(reverse("taxi:car-detail", kwargs={"pk": car.pk}))
 
+
 class CarCreateView(LoginRequiredMixin, generic.CreateView):
     model = Car
     form_class = CarForm
